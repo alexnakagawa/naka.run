@@ -5,7 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('writing')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
@@ -35,7 +35,7 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<section>
+			<section class="font-serif">
 				<ul>
 					{
 						posts.map((post) => (
@@ -47,7 +47,7 @@ const posts = (await getCollection('blog')).sort(
 										day: 'numeric',
 									})}
 								</time>
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+								<a href={`/writing/${post.slug}/`}>{post.data.title}</a>
 							</li>
 						))
 					}
