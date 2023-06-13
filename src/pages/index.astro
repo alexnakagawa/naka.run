@@ -1,25 +1,24 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+let props = {title: SITE_TITLE, description: SITE_DESCRIPTION};
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-            <section class="font-serif py-2 prose">
-                <h1>Hello, I'm Alex.</h1>
-                <h3>&raquo; Fullstack Developer, Techno-Optimist, Web Craftsman</h3>
-                <p>I'm a software engineer who enjoys daydreaming about the outdoors. I embrace a mentality of D.I.Y. whether its creating through digital or physical mediums.</p>
-                <p>In past lives I was a teacher, a tired but inspired undergraduate student at Cal, an aspiring musical theater actor, and eventually got over my fear of bodies of water to become a lightweight rower.</p>
-            </section>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseLayout {...props}>
+	<main>
+		<section class="font-serif py-2 grid grid-cols-1 md:grid-cols-3 gap-1">
+			<div class="col-span-2 prose">
+				<h1>Hello, I'm Alex.</h1>
+				<h3>&raquo; Fullstack Developer, Techno-Optimist, Web Craftsman</h3>
+				<p>I'm a software engineer who enjoys daydreaming about the outdoors. I embrace a mentality of D.I.Y. whether its creating tools through digital or physical mediums.</p>
+				<p>Contrary to the name of this site, I am not a runner. I do, however, enjoy walking in both urban and rural settings, and do a decent amount of it.</p>
+				<p>In past lives I was a teacher, a tired but inspired undergraduate student at Cal, an aspiring musical theater actor, and eventually got over my fear of bodies of water to become a lightweight rower.</p>
+			</div>
+			<div>
+				<figure>
+					<img src="" alt="">
+				</figure>
+			</div>
+		</section>
+	</main>
+</BaseLayout>
