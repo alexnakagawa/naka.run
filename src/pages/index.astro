@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LeftSquiggle from "../components/LeftSquiggle.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
 let props = {title: SITE_TITLE, description: SITE_DESCRIPTION};
 ---
 
@@ -31,7 +33,7 @@ let props = {title: SITE_TITLE, description: SITE_DESCRIPTION};
 			<div class="pt-8">
 				<figure class="h-100 aspect-square relative bg-background shadow-[0_10px_25px_5px_#242f3d] shadow-background/70">
 					<div class="absolute inset-0 bg-grid bg-gridSize text-neutral-600 mask-down border-r border-current">
-						
+						<LeftSquiggle />
 					</div>
 				</figure>
 			</div>
