@@ -1,77 +1,145 @@
 /*
+The beautiful Flexoki CSS Color Palette is used with permission under the MIT License. Copyright (c) 2023 Steph Ango
+
+License: https://github.com/kepano/flexoki/blob/main/LICENSE
+
+More information about it can be found here: https://stephango.com/flexoki
+*/
+:root {
+    --flexoki-black: #100f0f;
+    --flexoki-paper: #fffcf0;
+
+    --flexoki-950: #1c1b1a;
+    --flexoki-900: #282726;
+    --flexoki-850: #343331;
+    --flexoki-800: #403e3c;
+    --flexoki-700: #575653;
+    --flexoki-600: #6f6e69;
+    --flexoki-500: #878580;
+    --flexoki-300: #b7b5ac;
+    --flexoki-200: #cecdc3;
+    --flexoki-150: #dad8ce;
+    --flexoki-100: #e6e4d9;
+    --flexoki-50: #f2f0e5;
+
+    --flexoki-red-600: #af3029;
+    --flexoki-red-400: #d14d41;
+
+    --flexoki-orange-600: #bc5215;
+    --flexoki-orange-400: #da702c;
+
+    --flexoki-yellow-900: #4d3a0b;
+    --flexoki-yellow-600: #ad8301;
+    --flexoki-yellow-400: #d0a215;
+    --flexoki-yellow-100: #fceeb8;
+
+    --flexoki-green-600: #66800b;
+    --flexoki-green-400: #879a39;
+
+    --flexoki-cyan-950: #142625;
+    --flexoki-cyan-600: #24837b;
+    --flexoki-cyan-400: #3aa99f;
+    --flexoki-cyan-50: #ebf2e7;
+
+    --flexoki-blue-600: #205ea6;
+    --flexoki-blue-400: #4385be;
+
+    --flexoki-purple-600: #5e409d;
+    --flexoki-purple-400: #8b7ec8;
+
+    --flexoki-magenta-600: #a02f6f;
+    --flexoki-magenta-400: #ce5d97;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-Black.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BespokeSerif";
+    src: url("/fonts/BespokeSerif-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "EBGaramond";
+    src: url("/fonts/EBGaramond12-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("/fonts/RobotoMono-Regular.ttf");
+}
+
+/*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
- @font-face {
-	font-family: 'Satoshi';
-	src: url('/fonts/Satoshi-Black.woff2') format('woff2');
-}
-
-@font-face {
-	font-family: 'BespokeSerif';
-	src: url('/fonts/BespokeSerif-Regular.woff2') format('woff2');
-}
-
-@font-face {
-	font-family: 'EBGaramond';
-	src: url('/fonts/EBGaramond12-Regular.ttf');
-}
-
-@font-face {
-	font-family: 'Roboto Mono';
-	src: url('/fonts/RobotoMono-Regular.ttf')
-}
-
- body {
-	font-family: 'Roboto Mono',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-	margin: auto;
-	padding: 20px;
-	/* max-width: 65ch; */
-	text-align: left;
-	background-color: #242f3d;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	line-height: calc(1em + 0.725rem);
-	color: #f5d484;
+body {
+    font-family:
+        "Roboto Mono",
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        Segoe UI,
+        Roboto,
+        Helvetica Neue,
+        Arial,
+        Noto Sans,
+        sans-serif,
+        Apple Color Emoji,
+        Segoe UI Emoji,
+        Segoe UI Symbol,
+        Noto Color Emoji;
+    margin: auto;
+    padding: 20px;
+    /* max-width: 65ch; */
+    text-align: left;
+    background-color: var(--flexoki-black);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: calc(1em + 0.725rem);
+    color: var(--flexoki-200);
 }
 
 a {
-	color: #f5d484;
+    color: #f5d484;
 }
 nav a {
-	margin-right: 10px;
+    margin-right: 10px;
 }
 textarea {
-	width: 100%;
-	font-size: 16px;
+    width: 100%;
+    font-size: 16px;
 }
 input {
-	font-size: 16px;
+    font-size: 16px;
 }
 content {
-	line-height: 1.6;
+    line-height: 1.6;
 }
 table {
-	width: 100%;
+    width: 100%;
 }
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 code {
-	padding: 2px 5px;
-	background-color: #f2f2f2;
+    padding: 2px 5px;
+    background-color: #f2f2f2;
 }
 pre {
-	padding: 1rem;
+    padding: 1rem;
 }
 pre > code {
-	all: unset;
+    all: unset;
 }
 blockquote {
-	border: 1px solid #f5d484;
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
-	font-style: italic;
+    border: 1px solid #f5d484;
+    padding: 2px 0px 2px 20px;
+    margin: 0px;
+    font-style: italic;
 }
