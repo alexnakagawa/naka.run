@@ -1,42 +1,66 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LeftSquiggle from "../components/LeftSquiggle.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
-let props = {title: SITE_TITLE, description: SITE_DESCRIPTION};
+let props = { title: SITE_TITLE, description: SITE_DESCRIPTION };
 ---
 
 <BaseLayout {...props}>
-	<style>
-		.bg-grid {
-			background-image: linear-gradient(90deg,currentColor 1px,transparent 0),linear-gradient(180deg,currentColor 1px,transparent 0);
-		}
+    <style>
+        .bg-grid {
+            background-image: linear-gradient(
+                    90deg,
+                    currentColor 1px,
+                    transparent 0
+                ),
+                linear-gradient(180deg, currentColor 1px, transparent 0);
+        }
 
-		.bg-gridSize {
-			background-size: 30px 30px;
-		}
+        .bg-gridSize {
+            background-size: 30px 30px;
+        }
 
-		.mask-down {
-			-webkit-mask-image: linear-gradient(180deg,#000 60%,transparent);
-			mask-image: linear-gradient(180deg,#000 60%,transparent)
-		}
-	</style>
-	<main>
-		<section class="py-2 grid grid-cols-1 md:grid-cols-3 gap-1">
-			<div class="col-span-2 prose">
-				<h1>Hello, I'm Alex.</h1>
-				<h3>&raquo; Developer, Techno-Optimist, Web Craftsman &laquo;</h3>
-				<p>I'm a software engineer who enjoys daydreaming about the outdoors. I embrace a mentality of D.I.Y. whether its creating tools through digital or physical mediums.</p>
-				<p>Contrary to the name of this site, I am not a runner. I do, however, enjoy walking in both urban and rural settings, and do a decent amount of it.</p>
-				<p>In past lives I was a teacher, a tired but inspired undergraduate student at Cal, an aspiring musical theater actor, and eventually got over my fear of bodies of water to become a lightweight rower.</p>
-			</div>
-			<div class="pt-8">
-				<figure class="h-115 aspect-square relative bg-background shadow-[0_10px_25px_5px_#242f3d] shadow-background/70">
-					<div class="absolute inset-0 bg-grid bg-gridSize text-neutral-600 mask-down border-r border-current">
-						<LeftSquiggle />
-					</div>
-				</figure>
-			</div>
-		</section>
-	</main>
+        .mask-down {
+            -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+            mask-image: linear-gradient(180deg, #000 60%, transparent);
+        }
+    </style>
+    <main>
+        <section class="grid grid-cols-1 gap-1 py-2 md:grid-cols-3">
+            <div class="prose col-span-2">
+                <h1>Hello, I'm Alex.</h1>
+                <h3>
+                    &raquo; Developer, Techno-Optimist, Web Craftsman &laquo;
+                </h3>
+                <p>
+                    I'm a software engineer who enjoys daydreaming about the
+                    outdoors. I embrace a mentality of D.I.Y. whether its
+                    creating tools through digital or physical mediums.
+                </p>
+                <p>
+                    Contrary to the name of this site, I am not a runner. I do,
+                    however, enjoy walking in both urban and rural settings, and
+                    do a decent amount of it.
+                </p>
+                <!-- <p>
+                    In past lives I was a teacher, a tired but inspired
+                    undergraduate student at Cal, an aspiring musical theater
+                    actor, and eventually got over my fear of bodies of water to
+                    become a lightweight rower.
+                </p> -->
+            </div>
+            <div class="pt-8">
+                <figure
+                    class="h-115 bg-background shadow-background/70 relative aspect-square shadow-[0_10px_25px_5px_#242f3d]"
+                >
+                    <div
+                        class="bg-grid bg-gridSize mask-down absolute inset-0 border-r border-current text-neutral-600"
+                    >
+                        <LeftSquiggle />
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </main>
 </BaseLayout>

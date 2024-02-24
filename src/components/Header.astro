@@ -1,16 +1,16 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
 ---
 
 <header class="my-2">
-	<h2 class="italic font-700">
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/writing">Writing</HeaderLink>
-		<HeaderLink href="/lists">Lists</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-	</nav>
+    <h2 class="font-700 italic">
+        {SITE_TITLE}
+    </h2>
+    <nav>
+        <HeaderLink href="/">home</HeaderLink>
+        <HeaderLink href="/writing">writing</HeaderLink>
+        <HeaderLink href="/favorites">favorites</HeaderLink>
+        <HeaderLink href="/about">about</HeaderLink>
+    </nav>
 </header>
