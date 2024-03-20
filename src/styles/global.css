@@ -104,8 +104,8 @@ body {
     color: var(--flexoki-200);
 }
 
-a {
-    color: #f5d484;
+a:hover {
+    color: var(--flexoki-cyan-400) !important;
 }
 nav a {
     margin-right: 10px;
@@ -138,7 +138,7 @@ pre > code {
     all: unset;
 }
 blockquote {
-    border: 1px solid #f5d484;
+    border: 1px solid var(--flexoki-purple-400);
     padding: 2px 0px 2px 20px;
     margin: 0px;
     font-style: italic;

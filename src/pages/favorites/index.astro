@@ -22,11 +22,13 @@ const favorites = (await getCollection("favorites")).sort(
             ul li {
                 display: flex;
             }
-            ul li time {
+            ul li time,
+            ul li p {
                 flex: 0 0 130px;
                 font-style: italic;
                 color: #595959;
             }
+
             ul li a:visited {
                 color: #8e32dc;
             }
@@ -37,6 +39,10 @@ const favorites = (await getCollection("favorites")).sort(
         <main>
             <section>
                 <ul>
+                    <li>
+                        <p>Last Updated</p>
+                        <p></p>
+                    </li>
                     {
                         favorites.map((post) => (
                             <li>
